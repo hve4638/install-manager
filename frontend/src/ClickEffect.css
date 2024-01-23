@@ -1,0 +1,25 @@
+.animation-clickable {
+    width: 200px; /* 이미지의 기본 크기 */
+    transition: transform 0.3s ease; /* transform 속성에 대한 0.3초의 부드러운 전환 효과 */
+    cursor: pointer;
+}
+
+.animation-clickable:hover {
+    transform: scale(0.9); /* hover 시 약간 축소 */
+}
+
+.animation-clickable.clicked {
+    animation: bounceAnimation 0.3s ease; /* 클릭 시 bounceAnimation 애니메이션 적용 */
+}
+
+@keyframes bounceAnimation {
+    0% {
+        transform: scale(0.9); /* 시작, 중간, 끝에서 기본 크기 */
+    }
+    40% {
+        transform: scale(0.8); /* 40%에서 축소 */
+    }
+    80% {
+        transform: scale(0.95); /* 60%에서 확대 */
+    }
+}
